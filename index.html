@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keerthana M R — Information Science Engineer</title>
+  <meta name="description" content="Portfolio of Keerthana M R, B.E. ISE student at VVCE Mysuru. Passionate about Python, IoT, Machine Learning and building real-world tech solutions." />
+  <meta name="keywords" content="Keerthana M R, portfolio, ISE, VVCE, Python, IoT, Arduino, Machine Learning" />
+  <meta name="author" content="Keerthana M R" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="sticky-nav" id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="logo">Keerthana M R</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about"        class="nav-link">About</a></li>
+      <li><a href="#education"    class="nav-link">Education</a></li>
+      <li><a href="#skills"       class="nav-link">Skills</a></li>
+      <li><a href="#projects"     class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
+      <li><a href="#contact"      class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero">
+  <div class="hero-content">
+
+    <!-- Profile photo — falls back to initials if image missing -->
+    <div class="avatar-wrapper">
+      <div class="avatar-ring">
+        <img
+          src="avatar.png"
+          alt="Keerthana M R profile photo"
+          class="avatar-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="avatar-initials" style="display:none;">KM</div>
+      </div>
+    </div>
+
+    <h1 class="hero-name">Keerthana M R</h1>
+    <p class="hero-tagline">"Turning complex ideas into clear, actionable insights&thinsp;—&thinsp;one query at a time."</p>
+    <p class="hero-meta">
+      <span>📍 Mandya, Karnataka</span>
+      <span class="dot-sep">·</span>
+      <span>🎓 B.E. ISE &amp; VVCE, 2024–28</span>
+      <span class="dot-sep">·</span>
+      <span>🔭 Student &amp; Builder</span>
+    </p>
+
+    <div class="hero-actions">
+      <a href="mailto:keerthanamr1970@gmail.com" class="btn btn-primary" id="heroEmail">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        Email Me
+      </a>
+      <a href="https://www.linkedin.com/in/keerthana-m-r-427a5332b" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="heroLinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://github.com/keerthanamr08" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="heroGitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        GitHub
+      </a>
+      <!-- Resume download — replace href with your actual PDF when available -->
+      <a href="#" class="btn btn-outline" id="heroResume" download="Keerthana_MR_Resume.pdf"
+         onclick="if(this.getAttribute('href')==='#'){alert('Resume PDF coming soon! Please contact me directly via email.');return false;}">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">01 — About</span>
+      <h2 class="section-title">Hello, I'm Keerthana</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I'm a first-year <strong>Information Science and Engineering</strong> student at Vidyavardhaka College of Engineering, Mysuru — driven by curiosity, creativity, and a love for technology that solves real problems.</p>
+        <p>From programming IoT systems with Arduino to exploring data science with Python, I enjoy connecting hardware with software to build meaningful solutions. I'm currently deepening my knowledge in Machine Learning, Cloud Computing, and full-stack web development.</p>
+        <p>Beyond tech, I'm an enthusiastic leader and collaborator — having coordinated events and participated in hackathons — always keen to learn, contribute, and grow.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <span class="stat-number">97.12%</span>
+          <span class="stat-label">10th Score</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">88.88%</span>
+          <span class="stat-label">12th / PUC Score</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">7+</span>
+          <span class="stat-label">Skill Areas</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">2026</span>
+          <span class="stat-label">Active Since</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">02 — Education</span>
+      <h2 class="section-title">Academic Journey</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="timeline">
+
+      <!-- B.E. -->
+      <div class="timeline-item">
+        <div class="timeline-dot current"></div>
+        <div class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <h3>B.E. in Information Science and Engineering</h3>
+              <p class="timeline-org">Vidyavardhaka College of Engineering, Mysuru</p>
+              <p class="timeline-date">📅 2024 – 2028</p>
+            </div>
+            <span class="timeline-badge">Current</span>
+          </div>
+          <p class="timeline-detail">Pursuing a four-year undergraduate degree, with focus on algorithms, data structures, IoT, machine learning, and software systems design.</p>
+        </div>
+      </div>
+
+      <!-- 12th -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <h3>12th Standard / PUC</h3>
+              <p class="timeline-org">Deeksha CFL PU College</p>
+              <p class="timeline-date">📅 2024</p>
+            </div>
+            <span class="timeline-badge score">88.88%</span>
+          </div>
+          <p class="timeline-detail">Completed the Pre-University Course in the Science stream with distinction.</p>
+        </div>
+      </div>
+
+      <!-- 10th -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="timeline-top">
+            <div>
+              <h3>10th Standard / SSLC</h3>
+              <p class="timeline-org">Republic Central School</p>
+              <p class="timeline-date">📅 2022</p>
+            </div>
+            <span class="timeline-badge score">97.12%</span>
+          </div>
+          <p class="timeline-detail">Scored an outstanding 97.12% — ranked among the top performers in school.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">03 — Skills</span>
+      <h2 class="section-title">What I Work With</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-card" id="skillProgramming">
+        <div class="skill-card-icon">💻</div>
+        <h3>Programming</h3>
+        <div class="skill-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Java</span>
+          <span class="tag">C</span>
+        </div>
+      </div>
+
+      <div class="skill-card" id="skillWeb">
+        <div class="skill-card-icon">🌐</div>
+        <h3>Web</h3>
+        <div class="skill-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </div>
+
+      <div class="skill-card" id="skillDatabases">
+        <div class="skill-card-icon">🗄️</div>
+        <h3>Databases</h3>
+        <div class="skill-tags">
+          <span class="tag">SQL</span>
+          <span class="tag">MySQL</span>
+        </div>
+      </div>
+
+      <div class="skill-card" id="skillTools">
+        <div class="skill-card-icon">🛠️</div>
+        <h3>Tools</h3>
+        <div class="skill-tags">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Google Cloud</span>
+        </div>
+      </div>
+
+      <div class="skill-card" id="skillML">
+        <div class="skill-card-icon">🤖</div>
+        <h3>Data Science / ML</h3>
+        <div class="skill-tags">
+          <span class="tag">Python (DS)</span>
+          <span class="tag">Machine Learning</span>
+        </div>
+      </div>
+
+      <div class="skill-card" id="skillIoT">
+        <div class="skill-card-icon">📡</div>
+        <h3>Hardware / IoT</h3>
+        <div class="skill-tags">
+          <span class="tag">Arduino</span>
+          <span class="tag">IoT Systems</span>
+        </div>
+      </div>
+
+      <div class="skill-card wide-card" id="skillSoft">
+        <div class="skill-card-icon">🌟</div>
+        <h3>Soft Skills</h3>
+        <div class="skill-tags">
+          <span class="tag">Leadership</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Teamwork</span>
+          <span class="tag">Project Management</span>
+          <span class="tag">Public Speaking</span>
+          <span class="tag">Time Management</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">04 — Projects</span>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card" id="projectClothFolding">
+        <div class="project-top">
+          <div class="project-icon">🤖</div>
+          <span class="project-status status-completed">✓ Completed</span>
+        </div>
+        <p class="project-cat">IoT &nbsp;/&nbsp; Mechatronics</p>
+        <h3>Automatic Cloth Folding Machine</h3>
+        <p class="project-short">A compact robot / mechanism that can detect, grip, and fold garments automatically — inspired by commercial robots like Foldimate.</p>
+
+        <button class="toggle-detail-btn" data-target="detailCloth" aria-expanded="false" id="toggleCloth">↓ Read More</button>
+        <div class="project-detail-text" id="detailCloth">
+          <p>The Automatic Cloth Folding Machine is a mechatronics innovation that automates the labor-intensive task of folding laundry items like t-shirts, towels, and pants.</p>
+          <p>It uses sensors, motors, and programmed flaps to detect garment size and execute precise creases in under 30 seconds per item. Built with Arduino, wooden platforms, DC servos, and IR sensors for cloth detection — it grips, rotates, and stacks clothes neatly, achieving high success rates on varied fabrics.</p>
+          <p>The project showcases skills in electronics, embedded programming, and mechanical design while addressing real-world efficiency needs in homes and laundromats.</p>
+        </div>
+
+        <div class="project-tech">
+          <span class="tag">Arduino</span>
+          <span class="tag">IR Sensors</span>
+          <span class="tag">DC Servos</span>
+          <span class="tag">Embedded C</span>
+          <span class="tag">IoT</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="projects-note">🚀 More projects in progress — currently building ML and Cloud solutions.</p>
+  </div>
+</section>
+
+<!-- ===================== ACHIEVEMENTS ===================== -->
+<section id="achievements" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">05 — Achievements</span>
+      <h2 class="section-title">Milestones &amp; Recognition</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="achievements-grid">
+
+      <div class="achievement-card" id="achieveHackathon">
+        <div class="achievement-icon">🏆</div>
+        <h3>Hackathons</h3>
+        <ul class="achievement-list">
+          <li>
+            <strong>DATATHON</strong>
+            <span>Participant</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="achievement-card" id="achieveCerts">
+        <div class="achievement-icon">🎓</div>
+        <h3>Certifications</h3>
+        <ul class="achievement-list">
+          <li>
+            <strong>Introduction to OS</strong>
+            <span>Coursera</span>
+          </li>
+          <li>
+            <strong>Python Programming</strong>
+            <span>Coursera</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="achievement-card" id="achieveLeadership">
+        <div class="achievement-icon">👑</div>
+        <h3>Leadership</h3>
+        <ul class="achievement-list">
+          <li>
+            <strong>Math Penta Fest</strong>
+            <span>Coordinator</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">06 — Contact</span>
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-subtitle">Whether it's a project collab, internship opportunity, or just a chat about tech — I'd love to hear from you.</p>
+    </div>
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info-list">
+        <div class="contact-info-item">
+          <div class="ci-icon">📧</div>
+          <div>
+            <span class="ci-label">Email</span>
+            <a href="mailto:keerthanamr1970@gmail.com" class="ci-value">keerthanamr1970@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">🔗</div>
+          <div>
+            <span class="ci-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/keerthana-m-r-427a5332b" target="_blank" rel="noopener noreferrer" class="ci-value">keerthana-m-r-427a5332b</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">🐙</div>
+          <div>
+            <span class="ci-label">GitHub</span>
+            <a href="https://github.com/keerthanamr08" target="_blank" rel="noopener noreferrer" class="ci-value">keerthanamr08</a>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <span class="ci-label">Location</span>
+            <p class="ci-value">Mandya, Karnataka, India</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="contactName">Your Name</label>
+          <input type="text" id="contactName" name="name" placeholder="e.g. Riya Sharma" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Your Email</label>
+          <input type="email" id="contactEmail" name="email" placeholder="e.g. riya@example.com" required autocomplete="email" />
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Your Message</label>
+          <textarea id="contactMessage" name="message" rows="5" placeholder="Hi Keerthana, I'd love to discuss..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+          <span class="btn-text">Send Message</span>
+          <span class="btn-spinner hidden" aria-hidden="true"></span>
+        </button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <p>Designed &amp; built by <strong>Keerthana M R</strong> &nbsp;·&nbsp; 2026</p>
+    <p>B.E. Information Science &amp; Engineering · VVCE, Mysuru</p>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
